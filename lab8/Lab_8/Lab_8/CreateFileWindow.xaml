@@ -1,0 +1,48 @@
+﻿<Window x:Class="Lab_8.CreateFileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Lab_8"
+        mc:Ignorable="d"
+        Title="File Creating" Height="400" Width="400" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="24" Margin="20" Grid.Row="0" HorizontalAlignment="Center">Create</TextBlock>
+
+        <StackPanel Grid.Row="1" Margin="20">
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Width="100">Name:</TextBlock>
+                <TextBox Name="nameTextBox" MinWidth="225" Width="160" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Width="100">Type:</TextBlock>
+                <RadioButton x:Name="fileType" GroupName="TypeRadio" IsChecked="True" RenderTransformOrigin="0.733,-2.375" Content="File"/>
+                <RadioButton x:Name="directoryType" GroupName="TypeRadio" Content="Directory" RenderTransformOrigin="2.156,0.564" Width="75"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                <TextBlock Width="100">Attributes:</TextBlock>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <CheckBox Name="isReadOnlyFile" Margin="0 3 0 3">ReadOnly</CheckBox>
+                    <CheckBox Name="isArchive" Margin="0 0 0 3">Archive</CheckBox>
+                    <CheckBox Name="isHiddenFile" Margin="0 0 0 3">Hidden</CheckBox>
+                    <CheckBox Name="isSystemFile" Margin="0 0 0 3">System</CheckBox>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="20">
+            <Button Click="onCreateClick" Margin="5" Padding="15">Create</Button>
+            <Button Click="onCancelClick" Margin="5" Padding="15">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

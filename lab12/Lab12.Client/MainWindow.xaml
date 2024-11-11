@@ -1,0 +1,22 @@
+﻿<Window x:Class="Lab12.Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Client" Height="350" Width="525">
+    <Grid>
+        <StackPanel Margin="10">
+            <TextBlock Text="Client ID:" Margin="5"/>
+            <TextBox Name="ClientIdTextBox" Margin="5" IsReadOnly="True"/>
+            <TextBlock Text="Messages sent:" Margin="5"/>
+            <TextBox Name="MessageNumberTextBox" Margin="5" IsReadOnly="True"/>
+            <TextBlock Text="Timestamp:" Margin="5"/>
+            <TextBox Name="TimestampTextBox" Margin="5" IsReadOnly="True"/>
+            <Button Name="ConnectButton" Content="Connect" Click="ConnectButton_OnClick" Margin="5"/>
+            <Button Name="DisconnectButton" Content="Disconnect" Click="DisconnectButton_OnClick" Margin="5" IsEnabled="False"/>
+            <Button Name="SendButton" Content="Send Data" Click="SendButton_OnClick" Margin="5" IsEnabled="False"/>
+            <TextBlock Text="Result:" Margin="5"/>
+            <TextBox Name="ResultTextBox" Margin="5" IsReadOnly="True"/>
+            <TextBlock Text="Status:" Margin="5"/>
+            <TextBox Name="Status" Margin="5" IsReadOnly="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
