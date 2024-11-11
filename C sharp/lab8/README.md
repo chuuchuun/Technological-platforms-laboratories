@@ -1,5 +1,3 @@
-In this lab, you I worked with C# data models and performed file operations. 
+Created a WPF application to browse and modify file structures from a selected directory. 
 
-The tasks included creating classes to represent data, implementing LINQ queries for data manipulation, and using XML serialization and deserialization. 
-
-I also practiced modifying XML structures and generating reports, such as creating tables in XHTML format, to display the processed data.
+The application has features for displaying file structure, opening fil``es, and creating or deleting files/folders with specific attributes.
